@@ -1,19 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#613B02"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Тут я хочу сделать некоторый функционал в будущем. Пример: кнопка добавления покемонов в список.-->
+    <LinearLayout
+        android:layout_marginTop="38dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:gravity="center">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/title_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Покéмоны 😎"
+            android:textColor="#E4B2EF"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/subtitle_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="Жмякай для информации:"
+            android:textColor="#F6F1FF"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <!-- Заметил проблему на других девайсах с центрированием контента. Думаю решить её так: -->
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width ="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+    <!-- Тут я оставлю список для покемонов, не более. -->
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_width ="320dp"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/pokemon1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint = "#9C27B0"
+                android:gravity="center_horizontal"
+                android:text="Вапорион"
+                android:textColor="#CDDC39"
+                android:textSize="36sp" />
+            <Button
+                android:id="@+id/pokemon2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint = "#9C27B0"
+                android:gravity="center_horizontal"
+                android:text="Пикачу"
+                android:textColor="#FFC107"
+                android:textSize="36sp"
+                android:layout_marginTop="8dp" />
+            <Button
+                android:id="@+id/pokemon3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint = "#9C27B0"
+                android:gravity="center_horizontal"
+                android:text="Ну, тестовая кнопка когда у нас не будет покемона"
+                android:textColor="#FFEB3B"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
