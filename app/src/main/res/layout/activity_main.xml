@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Pokémons 😎"
+            android:text="Покéмоны 😎"
             android:textColor="#E4B2EF"
             android:textSize="48sp" />
 
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:gravity="center"
-            android:text="Tap to see more info:"
+            android:text="Жмякай для информации:"
             android:textColor="#F6F1FF"
             android:textSize="18sp" />
     </LinearLayout>
@@ -54,21 +54,19 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint = "#9C27B0"
                 android:gravity="center_horizontal"
-                android:text="Vaporeon"
+                android:text="Вапорион"
                 android:textColor="#CDDC39"
-                android:textSize="36sp"
-                />
+                android:textSize="36sp" />
             <Button
                 android:id="@+id/pokemon2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint = "#9C27B0"
                 android:gravity="center_horizontal"
-                android:text="Pikachu"
+                android:text="Пикачу"
                 android:textColor="#FFC107"
                 android:textSize="36sp"
-                android:layout_marginTop="8dp"
-                />
+                android:layout_marginTop="8dp" />
             <Button
                 android:id="@+id/pokemon3"
                 android:layout_width="match_parent"
@@ -78,10 +76,7 @@
                 android:text="Ну, тестовая кнопка когда у нас не будет покемона"
                 android:textColor="#FFEB3B"
                 android:textSize="16sp"
-                android:layout_marginTop="8dp"
-                />
+                android:layout_marginTop="8dp" />
         </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>
