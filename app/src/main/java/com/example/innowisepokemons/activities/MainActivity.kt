@@ -16,15 +16,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        // Да простит меня дух святого кода за такую реализацию.
-        binding.pokemon1.setOnClickListener {
-            startPokemonDetailActivity(1)
-        }
-        binding.pokemon2.setOnClickListener {
-            startPokemonDetailActivity(2)
-        }
-        binding.pokemon3.setOnClickListener {
-            startPokemonDetailActivity(3)
-        }
     }
 }
