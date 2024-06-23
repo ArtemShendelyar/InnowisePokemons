@@ -1,4 +1,4 @@
-package com.example.innowisepokemons
+package com.example.innowisepokemons.activities
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import androidx.core.view.updateLayoutParams
 import com.example.innowisepokemons.databinding.ActivityPokemonDetailsBinding
+import com.example.innowisepokemons.data.PokemonData
 
 class DetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPokemonDetailsBinding

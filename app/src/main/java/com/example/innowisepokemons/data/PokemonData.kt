@@ -1,4 +1,6 @@
-package com.example.innowisepokemons
+package com.example.innowisepokemons.data
+
+import com.example.innowisepokemons.R
 
 object PokemonData {
     private val pokemons: HashMap<Int, Pokemon> = hashMapOf(

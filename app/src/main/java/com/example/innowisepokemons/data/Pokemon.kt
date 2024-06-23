@@ -1,4 +1,4 @@
-package com.example.innowisepokemons
+package com.example.innowisepokemons.data
 
 import androidx.annotation.DrawableRes
 

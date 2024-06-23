@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#613B02"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
 
     <!-- Тут я хочу сделать некоторый функционал в будущем. Пример: кнопка добавления покемонов в список.-->
     <LinearLayout

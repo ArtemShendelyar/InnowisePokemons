@@ -1,4 +1,4 @@
-package com.example.innowisepokemons
+package com.example.innowisepokemons.activities
 
 import android.content.Intent
 import android.os.Bundle
