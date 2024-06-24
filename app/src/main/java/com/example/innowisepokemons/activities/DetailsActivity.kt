@@ -26,9 +26,9 @@ class DetailsActivity : AppCompatActivity() {
             PokemonData.getPokemonById(pokemonId)?.let { pokemon ->
                 pokemonImage.setImageResource(pokemon.picture)
                 pokemonName.text = pokemon.name
-                pokemonWeight.text = "Вес: " + pokemon.weight.toString()
-                pokemonHeight.text = "Рост: " + pokemon.height.toString()
-                pokemonTypes.text = "Типы: " + pokemon.elementalType.toString()
+                pokemonWeight.text = "Вес: {pokemon.weight.toString()}"
+                pokemonHeight.text = "Рост: {pokemon.height.toString()}"
+                pokemonTypes.text = "Типы: {pokemon.elementalType.toString()}"
                 backBtn.setOnClickListener { finish() }
             } ?: showErrorAndFinish("Такого покемона нет. Увы.")
         }
@@ -39,9 +39,6 @@ class DetailsActivity : AppCompatActivity() {
         finish()
     }
     fun resizePokemon(view: View) {
-        // Я мог бы использовать тут биндинг. Но тогда мне легче было бы задать обработчик
-        // через анонимную функцию в методе DetailsActivity onCreate.
-        // Но пока я захотел протестировать код на различные варианты реализации.
         if (view.layoutParams.height + view.layoutParams.width > 1600){
             view.updateLayoutParams {
                 this.height = 0
@@ -52,7 +49,6 @@ class DetailsActivity : AppCompatActivity() {
                 this.height += 200
                 this.width += 200
             }
-
         }
     }
 }
