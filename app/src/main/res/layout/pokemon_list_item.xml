@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pokemon_name"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:text="Покемон"
+    android:textColor="#CDDC39"
+    android:textSize="36sp"
     android:layout_marginHorizontal="48dp"
     android:layout_marginTop="8dp"
     android:layout_width ="320dp"
-    android:background="#9C27B0"
-    android:gravity="center_horizontal">
-    <TextView
-        android:id="@+id/pokemon_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Покемон"
-        android:textColor="#CDDC39"
-        android:textSize="36sp">
-    </TextView>
-</FrameLayout>
+    android:background="#9C27B0">
+</TextView>
