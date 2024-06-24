@@ -11,7 +11,7 @@ class PokemonDiffUtilCallback(
     override fun getNewListSize(): Int = newItems.size
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
-        items[oldItemPosition].name == newItems[newItemPosition].name
+        items[oldItemPosition].id == newItems[newItemPosition].id
 
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean =
         items[oldItemPosition] == newItems[newItemPosition]

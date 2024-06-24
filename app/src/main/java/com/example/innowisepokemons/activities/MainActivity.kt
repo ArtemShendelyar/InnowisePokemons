@@ -3,8 +3,6 @@ package com.example.innowisepokemons.activities
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.RecyclerView.VERTICAL
 import com.example.innowisepokemons.data.PokemonData
 import com.example.innowisepokemons.databinding.ActivityMainBinding
 import com.example.innowisepokemons.recyler.PokemonAdapter
@@ -25,6 +23,5 @@ class MainActivity : AppCompatActivity() {
         }
         binding.pokemonList.adapter = adapter
         adapter.submit(PokemonData.getLisOfPokemons())
-        binding.pokemonList.addItemDecoration(DividerItemDecoration(this, VERTICAL))
     }
 }
