@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#613B02"
     android:orientation="vertical"
     tools:context=".activities.MainActivity">
@@ -39,6 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/pokemon_list_item"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         >
     </androidx.recyclerview.widget.RecyclerView>
 

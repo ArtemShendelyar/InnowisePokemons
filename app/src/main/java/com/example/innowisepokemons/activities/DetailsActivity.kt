@@ -26,9 +26,9 @@ class DetailsActivity : AppCompatActivity() {
             PokemonData.getPokemonById(pokemonId)?.let { pokemon ->
                 pokemonImage.setImageResource(pokemon.picture)
                 pokemonName.text = pokemon.name
-                pokemonWeight.text = "Вес: {pokemon.weight.toString()}"
-                pokemonHeight.text = "Рост: {pokemon.height.toString()}"
-                pokemonTypes.text = "Типы: {pokemon.elementalType.toString()}"
+                pokemonWeight.text = "Вес: ${pokemon.weight}. Ну и толстяк!"
+                pokemonHeight.text = "Рост: ${pokemon.height}. Ну и гора!"
+                pokemonTypes.text = "Типы: ${pokemon.elementalType} - жесть."
                 backBtn.setOnClickListener { finish() }
             } ?: showErrorAndFinish("Такого покемона нет. Увы.")
         }
