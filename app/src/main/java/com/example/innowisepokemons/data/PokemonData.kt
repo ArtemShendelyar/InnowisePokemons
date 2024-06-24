@@ -5,6 +5,7 @@ import com.example.innowisepokemons.R
 object PokemonData {
     private val pokemons: HashMap<Int, Pokemon> = hashMapOf(
             1 to Pokemon(
+                id = 1,
                 name = "Вапореошка",
                 weight = 29.0,
                 height = 1.0,
@@ -12,6 +13,7 @@ object PokemonData {
                 picture = R.drawable.vaporeon
             ),
             2 to Pokemon(
+                id = 2,
                 name = "Пикачидло",
                 weight = 6.0,
                 height = 0.4,
@@ -21,5 +23,9 @@ object PokemonData {
         )
         fun getPokemonById(id: Int): Pokemon? {
             return pokemons[id]
+        }
+
+        fun getLisOfPokemons(): List<Pokemon> {
+            return pokemons.values.toList()
         }
 }
