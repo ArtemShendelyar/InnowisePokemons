@@ -1,8 +1,8 @@
 package com.example.innowisepokemons
 
 object PokemonData {
-        private val pokemons: Map<Int, Pokemon> = listOf(
-            Pokemon(
+    private val pokemons: HashMap<Int, Pokemon> = hashMapOf(
+            1 to Pokemon(
                 id = 1,
                 name = "Вапореошка",
                 weight = 29.0,
@@ -10,7 +10,7 @@ object PokemonData {
                 elementalType = listOf("Водяной"),
                 picture = R.drawable.vaporeon
             ),
-            Pokemon(
+            2 to Pokemon(
                 id = 2,
                 name = "Пикачидло",
                 weight = 6.0,
@@ -18,7 +18,7 @@ object PokemonData {
                 elementalType = listOf("Электрический"),
                 picture = R.drawable.pikachu
             )
-        ).associateBy { it.id }
+        )
         fun getPokemonById(id: Int): Pokemon? {
             return pokemons[id]
         }
