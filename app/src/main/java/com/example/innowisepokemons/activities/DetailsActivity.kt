@@ -1,4 +1,4 @@
-package com.example.innowisepokemons
+package com.example.innowisepokemons.activities
 
 import android.os.Bundle
 import android.view.View
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.widget.Toast
 import androidx.core.view.updateLayoutParams
 import com.example.innowisepokemons.databinding.ActivityPokemonDetailsBinding
+import com.example.innowisepokemons.data.PokemonData
 
 class DetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityPokemonDetailsBinding
@@ -18,16 +19,17 @@ class DetailsActivity : AppCompatActivity() {
         val pokemonId = intent.extras?.getInt("pokemon_id", -1) ?: -1
         with(binding) {
             if (pokemonId == -1) {
-                Toast.makeText(this@DetailsActivity, "Плохой ID покемона.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@DetailsActivity, "Плохой ID покемона.", Toast.LENGTH_SHORT)
+                    .show()
                 finish()
                 return@with
             }
             PokemonData.getPokemonById(pokemonId)?.let { pokemon ->
                 pokemonImage.setImageResource(pokemon.picture)
                 pokemonName.text = pokemon.name
-                pokemonWeight.text = "Вес: {pokemon.weight.toString()}"
-                pokemonHeight.text = "Рост: {pokemon.height.toString()}"
-                pokemonTypes.text = "Типы: {pokemon.elementalType.toString()}"
+                pokemonWeight.text = "Вес: ${pokemon.weight}. Ну и толстяк!"
+                pokemonHeight.text = "Рост: ${pokemon.height}. Ну и гора!"
+                pokemonTypes.text = "Типы: ${pokemon.elementalType} - жесть."
                 backBtn.setOnClickListener { finish() }
             } ?: showErrorAndFinish("Такого покемона нет. Увы.")
         }
@@ -37,13 +39,14 @@ class DetailsActivity : AppCompatActivity() {
         Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
         finish()
     }
+
     fun resizePokemon(view: View) {
-        if (view.layoutParams.height + view.layoutParams.width > 1600){
+        if (view.layoutParams.height + view.layoutParams.width > 1600) {
             view.updateLayoutParams {
                 this.height = 0
                 this.width = 0
             }
-        }else{
+        } else {
             view.updateLayoutParams {
                 this.height += 200
                 this.width += 200
