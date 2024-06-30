@@ -1,4 +1,5 @@
 package com.example.innowisepokemons.recyler
+
 import androidx.recyclerview.widget.DiffUtil
 import com.example.innowisepokemons.data.Pokemon
 

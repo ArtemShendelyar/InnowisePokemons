@@ -19,7 +19,8 @@ class DetailsActivity : AppCompatActivity() {
         val pokemonId = intent.extras?.getInt("pokemon_id", -1) ?: -1
         with(binding) {
             if (pokemonId == -1) {
-                Toast.makeText(this@DetailsActivity, "Плохой ID покемона.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@DetailsActivity, "Плохой ID покемона.", Toast.LENGTH_SHORT)
+                    .show()
                 finish()
                 return@with
             }
@@ -38,13 +39,14 @@ class DetailsActivity : AppCompatActivity() {
         Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
         finish()
     }
+
     fun resizePokemon(view: View) {
-        if (view.layoutParams.height + view.layoutParams.width > 1600){
+        if (view.layoutParams.height + view.layoutParams.width > 1600) {
             view.updateLayoutParams {
                 this.height = 0
                 this.width = 0
             }
-        }else{
+        } else {
             view.updateLayoutParams {
                 this.height += 200
                 this.width += 200
