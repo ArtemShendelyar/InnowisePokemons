@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#613B02">
+
+    <TextView
+        android:id="@+id/pokemon_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="Какой-то покемон"
+        android:textAlignment="center"
+        android:textColor="#E4B2EF"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="wrap" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Тыкай по покемону что бы увеличить его размер!"
+        android:textAlignment="center"
+        android:textColor="#E4B2EF"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/pokemon_name"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintStart_toStartOf="@+id/pokemon_name"
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_name"
+        app:layout_constraintWidth_default="wrap" />
+
+    <ImageView
+        android:id="@+id/pokemon_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:onClick="resizePokemon"
+        android:src="@drawable/vaporeon"
+        app:layout_constraintBottom_toTopOf="@id/pokemon_properties_scroll"
+        app:layout_constraintEnd_toEndOf="@+id/pokemon_properties_scroll"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintStart_toStartOf="@+id/pokemon_properties_scroll"
+        app:layout_constraintTop_toBottomOf="@+id/pokemon_name"
+        app:layout_constraintWidth_default="spread" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/im_loving_doing_what_i_do"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.67" />
+
+    <ScrollView
+        android:id="@+id/pokemon_properties_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_max="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/im_loving_doing_what_i_do"
+        app:layout_constraintWidth_max="500dp">
+
+        <LinearLayout
+            android:id="@+id/pokemon_properties"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#673AB7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pokemon_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Вес:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pokemon_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Высота:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/pokemon_types"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Тип:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Вернуться"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/pokemon_properties_scroll"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintHeight_max="80dp"
+        app:layout_constraintStart_toStartOf="@+id/pokemon_properties_scroll"
+        app:layout_constraintTop_toBottomOf="@id/pokemon_properties_scroll"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_max="200dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
